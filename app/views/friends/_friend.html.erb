@@ -1,4 +1,30 @@
 <div id="<%= dom_id friend %>">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      
+        <%= friend.first_name %>
+        <%= friend.last_name %>
+      
+        <%= friend.email %>
+      
+        <%= friend.phone %>
+      
+        <%= friend.twitter %>
+      </tc>
+    </tbody>
+</table>
   <p>
     <strong>First name:</strong>
     <%= friend.first_name %>

@@ -90,4 +90,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+# For hosting DB on external server add the url from localhost to server URL and host the DB
+#  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
