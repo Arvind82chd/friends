@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  # root 'home#index'
+  root 'friends#index'
   devise_for :users
   resources :friends
   #resources :devise

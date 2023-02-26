@@ -1,26 +1,14 @@
-<table class="table"
-<thead>
-<tr>
-  
-  <th scope="col">First Name</th>
-  <th scope="col">Last Name</th>
-  <th scope="col">Email</th>
-  <th scope="col">Phone</th>
-  <th scope="col">Twitter</th>
-  <th scope="col">User Id</th>
-  <th scope="col">Actions</th>
-  <th scope="col">Actions</th>
-  <th scope="col">Actions</th>
+<br/>
+<br/>
 
-</tr>
-</thead>
-
-<%= render @friend %>
-
-<div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
-  <%= link_to "Back to friends", friends_path %>
-
-  <%= button_to "Destroy this friend", @friend, method: :delete %>
+<div class="card text-bg-dark mb-3" >
+  <h3 class="card-header"><%= @friend.first_name + ' ' + @friend.last_name %></h3>
+  <div class="card-body">
+    <h4 class="card-title"><%= @friend.email %></h4> 
+    <p class="card-text"><%= @friend.phone %> | <%= @friend.twitter %></p>
+    <a class="btn btn-light" <%= link_to "Edit", edit_friend_path(@friend) %></a>
+    <a class="btn btn-danger" <%= link_to "Delete", @friend, data: {turbo_method: :delete} %></a>
+    <a class="btn btn-secondary" <%= link_to "Back to friends", friends_path %></a>
+    
+  </div>
 </div>
-</table>

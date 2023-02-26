@@ -4,10 +4,7 @@ class HomeController < ApplicationController
   end
 
   def about
-    
-  end
-
-  def destroy
+    @about_me = "My Name is ...... !!! "
   end
 
 end
