@@ -27,6 +27,10 @@
 
       <%= form.label :twitter, style: "display: block" %>
       <%= form.text_field :twitter %>
+
+      # <%= form.label :user_id, style: "display: block" %>
+      <%= form.number_field :user_id, id: :friend_user_id, value: current_user.id, type: :hidden %>
+  
           <br/>
           <br/>
       <%= form.submit %>

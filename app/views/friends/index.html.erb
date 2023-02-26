@@ -1,14 +1,27 @@
 
 
 <h1>Friends List</h1>
-
+<table class="table table-bordered">
+<thead>
+<tr>
+  
+  <th scope="col">First Name</th>
+  <th scope="col">Last Name</th>
+  <th scope="col">Email</th>
+  <th scope="col">Phone</th>
+  <th scope="col">Twitter</th>
+  <th scope="col">User Id</th>
+  <th scope="col3">Actions</th>
+  <th scope="col">Actions</th>
+  <th scope="col">Actions</th>
+  
+</tr>
+</thead>
 <div id="friends">
   <% @friends.each do |friend| %>
     <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
   <% end %>
 </div>
+</table>
 
 <%= link_to "New friend", new_friend_path %>

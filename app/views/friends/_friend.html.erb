@@ -1,53 +1,16 @@
-<div id="<%= dom_id friend %>">
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Twitter</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      
-        <%= friend.first_name %>
-        <%= friend.last_name %>
-      
-        <%= friend.email %>
-      
-        <%= friend.phone %>
-      
-        <%= friend.twitter %>
-      </tc>
-    </tbody>
-</table>
-  <p>
-    <strong>First name:</strong>
-    <%= friend.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
-    <%= friend.last_name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= friend.phone %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
-    <%= friend.twitter %>
-  </p>
-
-</div>
+<tbody>
+  <tr>
+    
+    <td><%= friend.first_name %></td>
+    <td> <%= friend.last_name %></td>
+    <td><%= friend.email %></td>
+    <td><%= friend.phone %></td>
+    <td><%= friend.twitter %></td>
+    <td><%= friend.user_id %></td>
+    <td><%= link_to "Show", friend %></td>
+    
+    <td><%= link_to "Edit", edit_friend_path(friend) %></td>
+    <td><%= link_to "Delete", friend, data: {turbo_method: :delete} %></td>
+ 
+  </tr>
+</tbody>
