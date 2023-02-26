@@ -13,9 +13,10 @@
   </head>
 
   <body>
-  <% if notice%>
-    <p class="notice"><%= notice %></p>
+  <% if notice %>
+    <%= render 'layouts/alerts' %>
   <% end %>
+  
     <%= render 'home/nav' %>
     <div class="container">
       <%= yield %>

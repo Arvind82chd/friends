@@ -10,14 +10,33 @@
         <li class="nav-item">
           <a class="nav-link"<%= link_to 'About Us', home_about_path%>></a>
         </li>
+        
+       
+
+        <% if user_signed_in? %>
         <li class="nav-item">
-        <a class="nav-link"<%= link_to 'Friends', friends_path%>></a>
+          <a class="nav-link"<%= link_to 'Friends', friends_path%>></a>
         </li>
         <li class="nav-item">
-        <a class="nav-link"<%= link_to 'Add Friend', new_friend_path%>></a>
+          <a class="nav-link"<%= link_to 'Add Friend', new_friend_path%>></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link"<%= link_to 'Sign Out', destroy_user_session_path, data:{turbo_method: :delete}  %>></a>
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"<%= link_to 'Edit Profile', edit_user_registration_path%>></a>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <a class="nav-link"<%= link_to 'Sign In', new_user_session_path%>></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"<%= link_to 'Sign Up', new_user_registration_path%>></a>
+        </li>
+        <% end %>
       </ul>
-    #   <button class="btn btn-outline-success" type="submit">Search</button>
+       <button class="btn btn-outline-success" type="submit">Search</button>
     </div>
   </div>
 </nav>

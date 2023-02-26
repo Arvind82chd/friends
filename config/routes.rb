@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  root 'home#index'
   devise_for :users
   resources :friends
-  root 'home#index'
+  #resources :devise
   get 'home/about'
   #get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
